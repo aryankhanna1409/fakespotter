@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔎 fakespotter
+<img src="assets/banner.svg" width="100%" alt="fakespotter: Reddit sentiment on counterfeit goods, via DistilBERT" />
 
 **Tracks how Reddit talks about counterfeit goods and scores the sentiment of every thread.**
 
