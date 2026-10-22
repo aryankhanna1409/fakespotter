@@ -1,13 +1,15 @@
+import os
 import praw
 import pandas as pd
 from transformers import pipeline
 import time
 
-# Reddit API setup (use your keys)
+# Reddit API setup: credentials come from environment variables (see README).
+# Create an app at https://www.reddit.com/prefs/apps to get them.
 reddit = praw.Reddit(
-    client_id='1C3dDOFxaG1oUAohSKte9w',
-    client_secret='yylmgfhWqACUEteu28O0uR_txzDqYw',
-    user_agent='FakeWatchSentimentScraper by Charming_Umpire5443'
+    client_id=os.environ["REDDIT_CLIENT_ID"],
+    client_secret=os.environ["REDDIT_CLIENT_SECRET"],
+    user_agent=os.environ.get("REDDIT_USER_AGENT", "FakeSpotter/1.0 (sentiment research script)"),
 )
 
 # Sentiment pipeline — DistilBERT SST-2
