@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fakespotter"
+version = "1.0.0"
+description = "Track how Reddit talks about counterfeit goods and score the sentiment of every thread."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Aryan Khanna" }]
+keywords = ["reddit", "sentiment-analysis", "distilbert", "counterfeit", "nlp"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+  "Environment :: Console",
+]
+dependencies = [
+  "pandas>=1.5",
+  "praw>=7.7",
+  "rich>=13.0",
+]
+
+[project.optional-dependencies]
+# The DistilBERT backend (the default). Kept optional so the lexicon backend,
+# reports and tests work on machines without PyTorch.
+ml = ["transformers>=4.30", "torch>=2.0"]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "ruff>=0.5"]
+
+[project.scripts]
+fakespotter = "fakespotter.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/aryankhanna1409/fakespotter"
+
+[tool.setuptools.packages.find]
+include = ["fakespotter*"]
+
+[tool.setuptools.package-data]
+fakespotter = ["data/*.csv"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q -m \"not model\""
+markers = ["model: needs transformers, torch and a network connection to download DistilBERT"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+ignore = ["E501", "SIM905", "B905"]

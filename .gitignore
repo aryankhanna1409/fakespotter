@@ -7,8 +7,24 @@ venv/
 # Secrets: never commit credentials
 .env
 .env.*
+!.env.example
 
 # OS / editors
 .DS_Store
 .vscode/
 .idea/
+
+# Build / test output
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated runs (the bundled samples live in fakespotter/data/)
+/*.csv
+/*.jsonl
+/*.html
+reports/

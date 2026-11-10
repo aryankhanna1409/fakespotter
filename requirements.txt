@@ -1,4 +1,7 @@
-praw
-pandas
-transformers
-torch
+# Everything needed to run the full pipeline, including the DistilBERT model.
+# Equivalent to: pip install -e ".[ml]"
+pandas>=1.5
+praw>=7.7
+rich>=13.0
+transformers>=4.30
+torch>=2.0

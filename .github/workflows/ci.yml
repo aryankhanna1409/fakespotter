@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install
+        run: pip install -e ".[dev]"
+      - name: Lint
+        run: |
+          ruff check .
+          ruff format --check .
+      - name: Test
+        run: pytest --cov=fakespotter --cov-report=term-missing
+      - name: Demo report
+        run: fakespotter demo --html demo-report.html
+      - uses: actions/upload-artifact@v4
+        if: matrix.python-version == '3.13'
+        with:
+          name: demo-report
+          path: demo-report.html
+
+  model:
+    # Downloads DistilBERT (~270 MB) and checks real verdicts, including threads far
+    # beyond the 512-token limit that used to come back as ERROR.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install (CPU-only PyTorch)
+        run: |
+          pip install torch --index-url https://download.pytorch.org/whl/cpu
+          pip install -e ".[ml,dev]"
+      - name: Model tests
+        run: pytest -m model
