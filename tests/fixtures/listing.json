@@ -1,0 +1,59 @@
+{
+ "kind": "Listing",
+ "data": {
+  "after": null,
+  "children": [
+   {
+    "kind": "t3",
+    "data": {
+     "id": "x1",
+     "title": "Finally arrived, QC looks amazing",
+     "selftext": "Super happy with this seller.",
+     "score": 3,
+     "num_comments": 2,
+     "url": "https://i.redd.it/img1.jpg",
+     "created_utc": 1748400060,
+     "subreddit": "Reps",
+     "permalink": "/r/Reps/comments/x1/slug_1/",
+     "author": "user1"
+    }
+   },
+   {
+    "kind": "t3",
+    "data": {
+     "id": "x2",
+     "title": "AVOID this agent - scam",
+     "selftext": "They took my money and never shipped.",
+     "score": 6,
+     "num_comments": 2,
+     "url": "https://i.redd.it/img2.jpg",
+     "created_utc": 1748400120,
+     "subreddit": "Reps",
+     "permalink": "/r/Reps/comments/x2/slug_2/",
+     "author": "user2"
+    }
+   },
+   {
+    "kind": "t1",
+    "data": {
+     "id": "stray"
+    }
+   },
+   {
+    "kind": "t3",
+    "data": {
+     "id": "x3",
+     "title": "First haul <script>alert(1)</script>",
+     "selftext": "",
+     "score": 9,
+     "num_comments": 2,
+     "url": "https://i.redd.it/img3.jpg",
+     "created_utc": 1748400180,
+     "subreddit": "Reps",
+     "permalink": "/r/Reps/comments/x3/slug_3/",
+     "author": "user3"
+    }
+   }
+  ]
+ }
+}

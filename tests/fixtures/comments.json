@@ -1,0 +1,79 @@
+[
+ {
+  "kind": "Listing",
+  "data": {
+   "children": [
+    {
+     "kind": "t3",
+     "data": {
+      "id": "x1",
+      "title": "Finally arrived",
+      "selftext": "",
+      "score": 3,
+      "num_comments": 2,
+      "url": "https://i.redd.it/img1.jpg",
+      "created_utc": 1748400060,
+      "subreddit": "Reps",
+      "permalink": "/r/Reps/comments/x1/slug_1/",
+      "author": "user1"
+     }
+    }
+   ]
+  }
+ },
+ {
+  "kind": "Listing",
+  "data": {
+   "children": [
+    {
+     "kind": "t1",
+     "data": {
+      "body": "Looks great, GL!",
+      "replies": {
+       "kind": "Listing",
+       "data": {
+        "children": [
+         {
+          "kind": "t1",
+          "data": {
+           "body": "Agreed, really clean",
+           "replies": ""
+          }
+         },
+         {
+          "kind": "more",
+          "data": {
+           "children": [
+            "abc"
+           ]
+          }
+         }
+        ]
+       }
+      }
+     }
+    },
+    {
+     "kind": "t1",
+     "data": {
+      "body": "[deleted]",
+      "replies": ""
+     }
+    },
+    {
+     "kind": "t1",
+     "data": {
+      "body": "Which seller?",
+      "replies": ""
+     }
+    },
+    {
+     "kind": "more",
+     "data": {
+      "count": 4
+     }
+    }
+   ]
+  }
+ }
+]
