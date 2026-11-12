@@ -4,17 +4,17 @@
 
 **Tracks how Reddit talks about counterfeit goods and scores the sentiment of every thread.**
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
-![PRAW](https://img.shields.io/badge/PRAW-Reddit%20API-FF4500?style=flat-square&logo=reddit&logoColor=white)
-![Transformers](https://img.shields.io/badge/🤗%20Transformers-DistilBERT-FFD21E?style=flat-square)
-![pandas](https://img.shields.io/badge/pandas-CSV%20export-150458?style=flat-square&logo=pandas&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10%2B-8a5a22?style=flat-square&logo=python&labelColor=1d120b&logoColor=efdfc4)
+![PRAW](https://img.shields.io/badge/PRAW-Reddit%20API-8a5a22?style=flat-square&logo=reddit&labelColor=1d120b&logoColor=efdfc4)
+![Transformers](https://img.shields.io/badge/🤗%20Transformers-DistilBERT-8a5a22?style=flat-square&labelColor=1d120b)
+![pandas](https://img.shields.io/badge/pandas-CSV%20export-8a5a22?style=flat-square&logo=pandas&labelColor=1d120b&logoColor=efdfc4)
 ![CI](https://github.com/aryankhanna1409/fakespotter/actions/workflows/ci.yml/badge.svg)
 
 </div>
 
 ---
 
-## ✨ What it does
+## What it does
 
 1. Pulls the current **hot posts** from one or more subreddits (the example run uses `r/Reps`, a replica community) through the official Reddit API, or through Reddit's public JSON if you have no API keys.
 2. For each post, combines the title, body and all comments into one text, trimmed to about 2,000 characters.
@@ -34,7 +34,7 @@ Posts are fetched slowly (a 2-second pause between each, configurable) to respec
 
 ---
 
-## 🚀 Quick start
+## Quick start
 
 ```bash
 git clone https://github.com/aryankhanna1409/fakespotter.git
@@ -74,7 +74,7 @@ That reads the 100 hot posts of r/Reps, writes `fakewatches_deep_sentiment.csv` 
 
 ---
 
-## 🧭 Commands
+## Commands
 
 | Command | What it does |
 |---|---|
@@ -131,7 +131,7 @@ Press <kbd>Ctrl</kbd>+<kbd>C</kbd> during a scrape and everything scored so far 
 
 ---
 
-## 📊 The output
+## The output
 
 | Column | Meaning |
 |---|---|
@@ -157,7 +157,7 @@ The first eight columns are exactly those of the original script, in the same or
 
 ---
 
-## 🧠 How it works
+## How it works
 
 ```
  Reddit API (PRAW) ─┐
@@ -193,7 +193,7 @@ SST-2 was trained on film reviews, not replica-buying slang: "GL", "W2C" or "�
 
 ---
 
-## 🧪 Development
+## Development
 
 ```bash
 pip install -r requirements-dev.txt     # or: pip install -e ".[ml,dev]"
@@ -207,7 +207,7 @@ The fast suite fakes Reddit and the model, so it runs in seconds anywhere. CI ru
 
 ---
 
-## 📁 What's in the repo
+## What's in the repo
 
 | Path | Purpose |
 |---|---|
@@ -229,6 +229,10 @@ Reddit is the only source implemented so far; the `Source` interface in `fakespo
 
 <div align="center">
 
+<img src="assets/footer.svg" width="100%" alt="Off the menu: from the archive" />
+
 Reads public discussion only
+
+<sub>Part of <a href="https://github.com/aryankhanna1409">Aryan Khanna's portfolio</a>: one loop, five pours, from robots to AI systems.</sub>
 
 </div>
