@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" width="100%" alt="fakespotter: Reddit sentiment on counterfeit goods, via DistilBERT" />
+<picture><source media="(prefers-color-scheme: light)" srcset="assets/banner-light.svg" /><img src="assets/banner.svg" width="100%" alt="fakespotter: Reddit sentiment on counterfeit goods, via DistilBERT" /></picture>
 
 **Tracks how Reddit talks about counterfeit goods and scores the sentiment of every thread.**
 
@@ -229,7 +229,7 @@ Reddit is the only source implemented so far; the `Source` interface in `fakespo
 
 <div align="center">
 
-<img src="assets/footer.svg" width="100%" alt="Off the menu: from the archive" />
+<picture><source media="(prefers-color-scheme: light)" srcset="assets/footer-light.svg" /><img src="assets/footer.svg" width="100%" alt="Off the menu: from the archive" /></picture>
 
 Reads public discussion only
 
